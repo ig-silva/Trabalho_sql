@@ -50,15 +50,10 @@ values
 insert into funcionarios (nome, idade, salario, ativo, data_contratacao, habilidades, cargo)
 values
 ('ana silva', 29, 4500.00, true, '2022-03-01', array['python','sql'], 'analista de sistemas'),
-('lucas mendes', 32, 5200.00, true, '2021-06-10', array['java','docker'], 'analista de sistemas'),
 ('bruno costa', 35, 6000.00, true, '2020-07-15', array['liderança','comunicação'], 'gerente de projetos'),
-('fernanda alves', 40, 7500.00, true, '2017-11-03', array['gestão ágil','scrum'], 'gerente de projetos'),
 ('carla souza', 41, 7200.00, true, '2018-01-20', array['excel','financeiro'], 'analista financeiro'),
-('rodrigo pires', 28, 5800.00, true, '2023-02-01', array['contabilidade','power bi'], 'analista financeiro'),
 ('daniel rocha', 26, 3500.00, true, '2023-05-10', array['redes sociais','seo'], 'assistente de marketing'),
-('juliana freitas', 24, 3200.00, true, '2024-01-15', array['design','copywriting'], 'assistente de marketing'),
-('eduardo lima', 38, 8000.00, true, '2019-09-01', array['logística','planejamento'], 'coordenador de operações'),
-('marcos oliveira', 45, 8800.00, true, '2015-04-20', array['gestão de processos','lean'], 'coordenador de operações');
+('eduardo lima', 38, 8000.00, true, '2019-09-01', array['logística','planejamento'], 'coordenador de operações');
 
 insert into projetos (nome, departamento_id, responsavel_id, orcamento, concluido)
 values
@@ -69,7 +64,20 @@ values
 ('otimização da linha de produção', 5, 5, 40000.00, false);
 
 --Toeldos
+--Igor:
+update funcionarios
+set salario = 7500
+where id = 5;
 
+update projetos
+set concluido = true
+where id = 5;
+
+delete funcionarios
+where id = 4;
+
+delete projetos
+where id = 2;
 
 
 
